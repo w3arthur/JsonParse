@@ -1,0 +1,68 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.2em; /*16px*/
+    line-height: 1.4em; /*24px*/
+    font-weight: 400;
+    /*vars*/
+    --paddingR: 2rem;
+    --paddingR-small: 1rem;
+    --margin-left: 20px;
+    --margin-left-small: 10px;
+  }
+  
+  body{
+    color: #213547;
+    background-color: #fcfcfc;
+    margin: 0 auto; /*center*/
+    padding: var(--paddingR);
+  }
+  
+  h1 { font-size: 2.6em; line-height: 1.1; margin: 5px }
+  
+  a { font-weight: 500; color: #646cff; }
+  
+  a:hover { color: #747bff; }
+  
+  #main { width: calc(100vw - var(--paddingR) - 20px); }
+  
+  #app {  width: calc(100vw - var(--paddingR) - 20px); }
+  
+  #app > .element{ /*only the top elements*/
+    min-width: calc(33vw - var(--paddingR) / 3  - var(--margin-left) - 10px);
+    margin-right: 3px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .element {
+    border: 1px solid green;
+    background-color: #a0a0a041;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    width: calc(100% -var(--margin-left) - 10px); 
+  }
+  .element .element { margin-left: var(--margin-left); }
+  
+  @media only screen and (max-width: 800px) {   /*small screen*/
+    body{ 
+        margin: 0;
+        padding: var(--paddingR-small);
+    }
+    #app > .element{ /*only the top*/
+      min-width: calc(100vw - var(--paddingR-small)  - var(--margin-left-small) - 30px);
+      margin-bottom: 14px;
+    }
+    .element { width: calc(100% - var(--margin-left-small) - 20px); }
+    .element .element { margin-left: var(--margin-left-small); }
+  }
+  
+  .element:hover { border: 2px solid rgb(100, 11, 244); }
+  
+  /*colors*/
+  #app > .element { background-color: #ADD8E6; }
+  #app > .element > .element{ background-color: #87CEFA; }
+  #app > .element > .element > .element{ background-color: #B0C4DE; }
+  #app > .element > .element > .element{ background-color: #B0C4DE; }
+  #app > .element > .element > .element > .element{ background-color: #FFA07A; }
+  
