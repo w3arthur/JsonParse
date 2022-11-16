@@ -43,4 +43,4 @@ const jsonToElement = (results) => {     //recursion
 
 finishLoaded(async() => {
     await loadElements();
-})
+});
