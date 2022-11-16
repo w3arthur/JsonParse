@@ -23,12 +23,12 @@
   
   a:hover { color: #747bff; }
   
-  #main { width: calc(100vw - var(--paddingR) - 20px); }
+  #main { width: calc(100vw - 2 * var(--paddingR) - 5px); }
   
-  #app {  width: calc(100vw - var(--paddingR) - 20px); }
+  #app {  width: calc(100vw - 2 * var(--paddingR) - 5px); }
   
   #app > .element{ /*only the top elements*/
-    min-width: calc(33vw - var(--paddingR) / 3  - var(--margin-left) - 10px);
+    min-width: calc(33vw - var(--paddingR) * 2 / 3  - var(--margin-left) - 5px);
     margin-right: 3px;
     display: inline-block;
     vertical-align: top;
@@ -40,7 +40,7 @@
     padding: 8px;
     margin-bottom: 8px;
     border-radius: 8px;
-    width: calc(100% -var(--margin-left) - 10px); 
+    width: calc(100% -var(--margin-left)); 
   }
   .element .element { margin-left: var(--margin-left); }
   
@@ -50,7 +50,7 @@
         padding: var(--paddingR-small);
     }
     #app > .element{ /*only the top*/
-      min-width: calc(100vw - var(--paddingR-small)  - var(--margin-left-small) - 30px);
+      min-width: calc(100vw - var(--paddingR-small) * 2  - var(--margin-left-small) - 12px);
       margin-bottom: 14px;
     }
     .element { width: calc(100% - var(--margin-left-small) - 20px); }
