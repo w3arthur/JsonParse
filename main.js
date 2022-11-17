@@ -1,4 +1,6 @@
 
+const fetchURL = './data.json';
+
 const finishLoaded = (callback) => { document.addEventListener('DOMContentLoaded', async() =>  { await callback(); } );};
 const elementApp = document.querySelector('#app');
 
@@ -29,7 +31,7 @@ const jsonToElement = (results) => {     //recursion
 
  const loadElements = async() => {
   try{
-    const data = await fetch('./data.json');
+    const data = await fetch( fetchURL );
     if(data.ok == false) throw new Error('no data file url');
     const results = await data.json();
     console.log(results);
