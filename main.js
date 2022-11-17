@@ -22,7 +22,7 @@ const jsonToElement = (results) => {     //recursion
       if(el.subData) internalElements = jsonToElement(el.subData);
       elements += element(el.id, el.name, el.url, internalElements) ;
     }
-  }catch(e){console.log('element error: ', e)}
+  }catch(e){console.log('element error: ', e);}
   return elements;
 };
 

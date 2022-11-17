@@ -23,9 +23,7 @@
   
   a:hover { color: #747bff; }
   
-  #main { width: calc(100vw - 2 * var(--paddingR) - 5px); }
-  
-  #app {  width: calc(100vw - 2 * var(--paddingR) - 5px); }
+  #main, #app { width: calc(100vw - 2 * var(--paddingR) - 5px); }
   
   #app > .element{ /*only the top elements*/
     min-width: calc(33vw - var(--paddingR) * 2 / 3  - var(--margin-left) - 5px);
