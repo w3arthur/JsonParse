@@ -39,7 +39,7 @@ const jsonToElement = (results) => {     //recursion
     elementApp.innerHTML = total;
   } catch(e){
     console.log('error: ' + e.message);
-    elementApp.innerHTML = 'Parsing error, please enter right json file value.';
+    elementApp.innerHTML = `Parsing error, please enter right json file value, check if you run on server or live server mode !,  ${fetchURL}`;
   }
 };
 
